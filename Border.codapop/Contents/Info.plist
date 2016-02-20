@@ -55,6 +55,23 @@
 				<dict/>
 			</dict>
 		</dict>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.Sass</string>
+			<key>Properties</key>
+			<dict>
+				<key>border</key>
+				<dict/>
+				<key>border-top</key>
+				<dict/>
+				<key>border-bottom</key>
+				<dict/>
+				<key>border-left</key>
+				<dict/>
+				<key>border-right</key>
+				<dict/>
+			</dict>
+		</dict>
 	</array>
 	<key>Size</key>
 	<string>{215, 90}</string>
