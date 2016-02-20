@@ -31,6 +31,15 @@
 				<dict/>
 			</dict>
 		</dict>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.Sass</string>
+			<key>Properties</key>
+			<dict>
+				<key>*</key>
+				<dict/>
+			</dict>
+		</dict>
 	</array>
 	<key>Size</key>
 	<string>{436, 253}</string>

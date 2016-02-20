@@ -40,6 +40,18 @@
 				</dict>
 			</dict>
 		</dict>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.Sass</string>
+			<key>Properties</key>
+			<dict>
+				<key>border-width</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+			</dict>
+		</dict>
 	</array>
 	<key>Size</key>
 	<string>{200, 155}</string>
