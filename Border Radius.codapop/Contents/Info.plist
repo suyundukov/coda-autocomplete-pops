@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Scopes</key>
+	<array>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.CSS</string>
+			<key>Properties</key>
+			<dict>
+				<key>border-radius</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+				<key>-moz-border-radius</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+				<key>-webkit-border-radius</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.SCSS</string>
+			<key>Properties</key>
+			<dict>
+				<key>border-radius</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+				<key>-moz-border-radius</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+				<key>-webkit-border-radius</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.LESS</string>
+			<key>Properties</key>
+			<dict>
+				<key>border-radius</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+				<key>-moz-border-radius</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+				<key>-webkit-border-radius</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>Size</key>
+	<string>{200, 200}</string>
+	<key>Title</key>
+	<string>Border Radius</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.panic.css.borderradius</string>
+</dict>
+</plist>

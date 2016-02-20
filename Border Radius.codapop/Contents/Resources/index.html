@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="stylesheets/border-radius.css" rel="stylesheet">
+    <script src="javascripts/jquery-1.7.2.js"></script>
+    <script src="javascripts/ember-0.9.7.1.js"></script>
+    <script src="javascripts/ember-jui.js"></script>
+    <script src="javascripts/popkit.js"></script>
+    <script src="javascripts/border-radius.js"></script>
+  </head>
+  <body>
+    <div id="border_radius" class="pop">
+      <script type="text/x-handlebars">
+        {{#view BorderRadius.Border
+                topLeftBinding="BorderRadius.borderController.topLeft"
+                topRightBinding="BorderRadius.borderController.topRight"
+                bottomLeftBinding="BorderRadius.borderController.bottomLeft"
+                bottomRightBinding="BorderRadius.borderController.bottomRight"}}
+          {{view BorderRadius.Slider classNames="tl" valueBinding="tlValue"}}
+          {{view BorderRadius.Slider classNames="tr" valueBinding="trValue"}}
+          {{view BorderRadius.Slider classNames="br" valueBinding="brValue"}}
+          {{view BorderRadius.Slider classNames="bl" valueBinding="blValue"}}
+        {{/view}}
+      </script>
+    </div>
+  </body>
+</html>

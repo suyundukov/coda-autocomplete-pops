@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="stylesheets/padding.css" rel="stylesheet">
+    <script src="javascripts/jquery-1.7.2.js"></script>
+    <script src="javascripts/ember-0.9.7.1.js"></script>
+    <script src="javascripts/ember-jui.js"></script>
+    <script src="javascripts/popkit.js"></script>
+    <script src="javascripts/padding.js"></script>
+    <script type="text/x-handlebars" data-template-name="row">
+      <div class="icon"></div>
+      <div class="track">{{view Dimension.Slider valueBinding="content"}}</div>
+    </script>
+  </head>
+  <body>
+    <div id="dimension">
+      <script type="text/x-handlebars">
+        {{view Dimension.Row 
+               classNames="all"
+               contentBinding="Dimension.mainController.all"}}
+        {{view Dimension.Row 
+               classNames="top" 
+               contentBinding="Dimension.mainController.top"}}
+        {{view Dimension.Row 
+               classNames="right" 
+               contentBinding="Dimension.mainController.right"}}
+        {{view Dimension.Row 
+               classNames="bottom" 
+               contentBinding="Dimension.mainController.bottom"}}
+        {{view Dimension.Row 
+               classNames="left"
+               contentBinding="Dimension.mainController.left"}}
+      </script>
+    </div>
+  </body>
+</html>

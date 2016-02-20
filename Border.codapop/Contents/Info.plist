@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Scopes</key>
+	<array>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.CSS</string>
+			<key>Properties</key>
+			<dict>
+				<key>border</key>
+				<dict/>
+				<key>border-top</key>
+				<dict/>
+				<key>border-bottom</key>
+				<dict/>
+				<key>border-left</key>
+				<dict/>
+				<key>border-right</key>
+				<dict/>
+			</dict>
+		</dict>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.SCSS</string>
+			<key>Properties</key>
+			<dict>
+				<key>border</key>
+				<dict/>
+				<key>border-top</key>
+				<dict/>
+				<key>border-bottom</key>
+				<dict/>
+				<key>border-left</key>
+				<dict/>
+				<key>border-right</key>
+				<dict/>
+			</dict>
+		</dict>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.LESS</string>
+			<key>Properties</key>
+			<dict>
+				<key>border</key>
+				<dict/>
+				<key>border-top</key>
+				<dict/>
+				<key>border-bottom</key>
+				<dict/>
+				<key>border-left</key>
+				<dict/>
+				<key>border-right</key>
+				<dict/>
+			</dict>
+		</dict>
+	</array>
+	<key>Size</key>
+	<string>{215, 90}</string>
+	<key>Title</key>
+	<string>Border</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.panic.css.border</string>
+</dict>
+</plist>

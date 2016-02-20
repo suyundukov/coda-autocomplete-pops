@@ -1,0 +1,299 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+/* Base container */
+.pop,#styles {
+	background: #ededed;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-webkit-user-select: none;
+}
+#styles {
+	width: 436px;
+	height: 253px;
+	padding: 5px;
+}
+#styles .inset {
+	background: white;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 424px;
+	height: 239px;
+	position: relative;
+}
+.categories {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 180px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.categories ul {
+	width: 171px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.categories ul li {
+	list-style-image: none;
+	list-style-type: none;
+	margin-left: 0px;
+	border-right: 1px solid #ccc;
+}
+.categories ul li {
+	height: 23px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+	position: relative;
+	background: -webkit-gradient(linear,50% 0%,50% 100%,color-stop(0%,#fcfcfc),color-stop(100%,#f5f5f5));
+	background: -webkit-linear-gradient(#fcfcfc,#f5f5f5);
+	background: linear-gradient(#fcfcfc,#f5f5f5);
+}
+.categories ul li:first-child {
+	-webkit-border-top-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.categories ul li:last-child {
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom: 0;
+}
+.categories ul li .icon {
+	position: absolute;
+	top: 4px;
+	left: 5px;
+	width: 16px;
+	height: 16px;
+	z-index: 100;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	overflow: hidden;
+	pointer-events: none;
+}
+.categories ul li label {
+	position: absolute;
+	top: 4px;
+	left: 28px;
+	right: 0;
+	font-size: 12px;
+	line-height: 16px;
+	color: black;
+	z-index: 100;
+	pointer-events: none;
+}
+.focused-left .categories ul li.is-selected label {
+	font-weight: bold;
+	color: white;
+	text-shadow: #3357c9 0 1px 1px;
+	-webkit-font-smoothing: antialiased;
+}
+.focused-left .categories ul li.is-selected:after {
+	pointer-events: none;
+	content: "";
+	position: absolute;
+	background-image: url("../images/pop-css-category-selection-right.png"), url("../images/pop-css-category-selection-mid.png");
+	background-image: 	-webkit-image-set(url(../images/pop-css-category-selection-right.png) 1x, url(../images/pop-css-category-selection-right@2x.png) 2x),
+						-webkit-image-set(url(../images/pop-css-category-selection-mid.png) 1x, url(../images/pop-css-category-selection-mid@2x.png) 2x);
+	background-repeat: no-repeat, repeat-x;
+	background-position: 100% 0%, 0% 0%;
+	background-size: 9px 25px, 1px 25px;
+	top: -1px;
+	left: 0;
+	right: -9px;
+	bottom: -1px;
+	z-index: 5;
+}
+.focused-left .categories ul li.is-selected:first-child {
+	-webkit-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+}
+.focused-left .categories ul li.is-selected:first-child:after {
+	left: -1px;
+	background-image: url("../images/pop-css-category-selection-right-top.png"), url("../images/pop-css-category-selection-left-top.png"), url("../images/pop-css-category-selection-mid.png");
+	background-image: 	-webkit-image-set(url(../images/pop-css-category-selection-right-top.png) 1x, url(../images/pop-css-category-selection-right-top@2x.png) 2x),
+						-webkit-image-set(url(../images/pop-css-category-selection-left-top.png) 1x, url(../images/pop-css-category-selection-left-top@2x.png) 2x),
+						-webkit-image-set(url(../images/pop-css-category-selection-mid.png) 1x, url(../images/pop-css-category-selection-mid@2x.png) 2x);
+	background-size: 9px 25px, 5px 25px, 1px 25px;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	background-position: 100% 0%, 0% 0%, 0% 0%;
+}
+.focused-left .categories ul li.is-selected:last-child {
+	-webkit-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.focused-left .categories ul li.is-selected:last-child:after {
+	left: -1px;
+	background: url('../images/pop-css-category-selection-right-bottom.png') no-repeat right 0,url('../images/pop-css-category-selection-left-bottom.png') no-repeat 0 0,url('../images/pop-css-category-selection-mid.png') repeat-x;
+	background-image: -webkit-image-set(url(../images/pop-css-category-selection-right-bottom.png) 1x, url(../images/pop-css-category-selection-right-bottom@2x.png) 2x), -webkit-image-set(url(../images/pop-css-category-selection-left-bottom.png) 1x, url(../images/pop-css-category-selection-left-bottom@2x.png) 2x), -webkit-image-set(url(../images/pop-css-category-selection-mid.png) 1x, url(../images/pop-css-category-selection-mid@2x.png) 2x);
+	background-size: 9px 25px, 5px 25px, 1px 25px;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	background-postion: right 0, 0 0, 0 0;
+}
+.focused-right .categories ul li.is-selected:after {
+	pointer-events: none;
+	content: "";
+	position: absolute;
+	background: url('../images/pop-css-category-selection-right-inactive.png') no-repeat right 0,url('../images/pop-css-category-selection-mid-inactive.png') repeat-x;
+	background-image: -webkit-image-set(url(../images/pop-css-category-selection-right-inactive.png) 1x, url(../images/pop-css-category-selection-right-inactive@2x.png) 2x), -webkit-image-set(url(../images/pop-css-category-selection-mid-inactive.png) 1x, url(../images/pop-css-category-selection-mid-inactive@2x.png) 2x);
+	background-size: 9px 25px, 1px 25px;
+	background-repeat: no-repeat, repeat-x;
+	background-position: right 0, 0 0;
+	top: -1px;
+	left: 0;
+	right: -9px;
+	bottom: -1px;
+	z-index: 5;
+}
+.focused-right .categories ul li.is-selected:first-child {
+	-webkit-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+}
+.focused-right .categories ul li.is-selected:first-child:after {
+	left: -1px;
+	background: url('../images/pop-css-category-selection-right-top-inactive.png') no-repeat right 0,url('../images/pop-css-category-selection-left-top-inactive.png') no-repeat 0 0,url('../images/pop-css-category-selection-mid-inactive.png') repeat-x;
+	background-image: -webkit-image-set(url(../images/pop-css-category-selection-right-top-inactive.png) 1x, url(../images/pop-css-category-selection-right-top-inactive@2x.png) 2x), -webkit-image-set(url(../images/pop-css-category-selection-left-top-inactive.png) 1x, url(../images/pop-css-category-selection-left-top-inactive@2x.png) 2x), -webkit-image-set(url(../images/pop-css-category-selection-mid-inactive.png) 1x, url(../images/pop-css-category-selection-mid-inactive@2x.png) 2x);
+	background-size: 9px 25px, 5px 25px, 1px 25px;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	background-position: right 0, 0 0, 0 0;
+}
+.focused-right .categories ul li.is-selected:last-child {
+	-webkit-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.focused-right .categories ul li.is-selected:last-child:after {
+	left: -1px;
+	background: url('../images/pop-css-category-selection-right-bottom-inactive.png') no-repeat right 0,url('../images/pop-css-category-selection-left-bottom-inactive.png') no-repeat 0 0,url('../images/pop-css-category-selection-mid-inactive.png') repeat-x;
+	background-image: -webkit-image-set(url(../images/pop-css-category-selection-right-bottom-inactive.png) 1x, url(../images/pop-css-category-selection-rightbottom-inactive@2x.png) 2x), -webkit-image-set(url(../images/pop-css-category-selection-left-bottom-inactive.png) 1x, url(../images/pop-css-category-selection-left-bottom-inactive@2x.png) 2x), -webkit-image-set(url(../images/pop-css-category-selection-mid-inactive.png) 1x, url(../images/pop-css-category-selection-mid-inactive@2x.png) 2x);
+	background-size: 9px 25px, 5px 25px, 1px 25px;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	background-position: right 0, 0 0, 0 0;
+}
+.backgrounds-icon .icon {
+	background-image: url('../images/icons/Background16.png');
+	background-image: -webkit-image-set(url(../images/icons/Background16.png) 1x, url(../images/icons/Background16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.border-icon .icon {
+	background-image: url('../images/icons/Borders16.png');
+	background-image: -webkit-image-set(url(../images/icons/Borders16.png) 1x, url(../images/icons/Borders16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.box-icon .icon {
+	background-image: url('../images/icons/Box16.png');
+	background-image: -webkit-image-set(url(../images/icons/Box16.png) 1x, url(../images/icons/Box16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.generated-icon .icon {
+	background-image: url('../images/icons/GeneratedContents16.png');
+	background-image: -webkit-image-set(url(../images/icons/GeneratedContents16.png) 1x, url(../images/icons/GeneratedContents16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.layout-icon .icon {
+	background-image: url('../images/icons/Layout16.png');
+	background-image: -webkit-image-set(url(../images/icons/Layout16.png) 1x, url(../images/icons/Layout16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.lists-icon .icon {
+	background-image: url('../images/icons/Lists16.png');
+	background-image: -webkit-image-set(url(../images/icons/Lists16.png) 1x, url(../images/icons/Lists16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.margins-icon .icon {
+	background-image: url('../images/icons/Mergins16.png');
+	background-image: -webkit-image-set(url(../images/icons/Mergins16.png) 1x, url(../images/icons/Mergins16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.padding-icon .icon {
+	background-image: url('../images/icons/Padding16.png');
+	background-image: -webkit-image-set(url(../images/icons/VenderSpecific16.png) 1x, url(../images/icons/VenderSpecific16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.paged-icon .icon {
+	background-image: url('../images/icons/PagedMedia16.png');
+	background-image: -webkit-image-set(url(../images/icons/PagedMedia16.png) 1x, url(../images/icons/PagedMedia16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.tables-icon .icon {
+	background-image: url('../images/icons/Tables16.png');
+	background-image: -webkit-image-set(url(../images/icons/Tables16.png) 1x, url(../images/icons/Tables16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.typography-icon .icon {
+	background-image: url('../images/icons/Typography16.png');
+	background-image: -webkit-image-set(url(../images/icons/Typography16.png) 1x, url(../images/icons/Typography16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.agent-icon .icon {
+	background-image: url('../images/icons/UserAgent16.png');
+	background-image: -webkit-image-set(url(../images/icons/UserAgent16.png) 1x, url(../images/icons/UserAgent16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.columns-icon .icon {
+	background-image: url('../images/icons/Columns16.png');
+	background-image: -webkit-image-set(url(../images/icons/Columns16.png) 1x, url(../images/icons/Columns16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.transform-icon .icon {
+	background-image: url('../images/icons/Transforms16.png');
+	background-image: -webkit-image-set(url(../images/icons/Transforms16.png) 1x, url(../images/icons/Transforms16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.transition-icon .icon {
+	background-image: url('../images/icons/Transitions16.png');
+	background-image: -webkit-image-set(url(../images/icons/Transitions16.png) 1x, url(../images/icons/Transitions16@2x.png) 2x);
+	background-size: 16px 16px;
+}
+.vendor-icon .icon {
+	background-image: url('../images/icons/VenderSpecific16.png');
+	background-image: -webkit-image-set(url(../images/icons/VenderSpecific16.png) 1x, url(../images/icons/VenderSpecific16.png) 2x);
+	background-size: 16px 16px;
+}
+.styles {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow-x: visible;
+	overflow-y: scroll;
+	width: 253px;
+}
+.styles ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.styles ul li {
+	list-style-image: none;
+	list-style-type: none;
+	margin-left: 0px;
+}
+.styles ul li {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: bold;
+	color: black;
+	padding: 0 10px 0 3px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.styles ul li.is-selected:first-child {
+	-webkit-border-top-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.styles ul li.is-selected:last-child {
+	-webkit-border-bottom-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.focused-right .styles ul li.is-selected {
+	color: white;
+	background: #386cda;
+	-webkit-font-smoothing: antialiased;
+}
+.focused-left .styles ul li.is-selected {
+	background: #d4d4d4;
+}

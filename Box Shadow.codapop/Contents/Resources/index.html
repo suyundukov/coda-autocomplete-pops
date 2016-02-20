@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="stylesheets/box-shadow.css" rel="stylesheet">
+    <script src="javascripts/jquery-1.7.2.js"></script>
+    <script src="javascripts/ember-0.9.7.1.js"></script>
+    <script src="javascripts/ember-jui.js"></script>
+    <script src="javascripts/popkit.js"></script>
+    <script src="javascripts/box-shadow.js"></script>
+  </head>
+  <body>
+    <div id="box_shadow">
+      <script type="text/x-handlebars">
+        <div class="inset">
+          <ul>
+            <li id="outset">
+              <input type="radio" id="outset_radio" name="radio" value="outset">
+              <label for="outset_radio">Outset</label>
+            </li>
+            <li id="inset">
+              <input type="radio" id="inset_radio" name="radio" value"inset">
+              <label for="inset_radio">Inset</label>
+            </li>
+          </ul>
+      
+          {{view PopKit.Swatch 
+                 colorBinding="BoxShadow.mainController.color"
+                 target="BoxShadow.mainController" action="openColorPop"}}
+        </div>
+    
+        <div class="sliders">
+          <ul>
+            {{view PopKit.SnapSlider tagName="li" elementId="x" smallerLabel="X"
+                   valueBinding="BoxShadow.mainController.x"}}
+            {{view PopKit.SnapSlider tagName="li" elementId="y" smallerLabel="Y"
+                   valueBinding="BoxShadow.mainController.y"}}
+            {{view PopKit.SnapSlider tagName="li" elementId="blur"
+                   smallerLabel="Sharp" largerLabel="Blurry"
+                   valueBinding="BoxShadow.mainController.blur"}}
+            {{view PopKit.Slider tagName="li" elementId="spread" 
+                   valueBinding="BoxShadow.mainController.spread"
+                   smallerLabel="No Spread" largerLabel="Full Spread"}}
+          </ul>
+        </div>
+      </script>
+    </div>
+  </body>
+</html>

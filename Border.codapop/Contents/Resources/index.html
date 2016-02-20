@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="stylesheets/border.css" rel="stylesheet">
+    <script src="javascripts/jquery-1.7.2.js"></script>
+    <script src="javascripts/ember-0.9.7.1.js"></script>
+    <script src="javascripts/ember-jui.js"></script>
+    <script src="javascripts/popkit.js"></script>
+    <script src="javascripts/border.js"></script>
+  </head>
+  <body>
+    <div id="border">
+      <script type="text/x-handlebars">
+        {{view PopKit.SnapSlider classNames="width"
+               valueBinding="Border.mainController.value"
+               smallerLabel="Thinner" largerLabel="Thicker"}}
+    
+        <div class="select">
+          <select>
+            <option value="solid">Solid</option>
+            <option value="dotted">Dotted</option>
+            <option value="dashed">Dashed</option>
+            <option value="double">Double</option>
+            <option value="groove">Groove</option>
+            <option value="ridge">Ridge</option>
+            <option value="outset">Outset</option>
+            <option value="inset">Inset</option>
+          </select>
+        </div>
+
+        {{view PopKit.Swatch
+               colorBinding="Border.mainController.color"
+               target="Border.mainController" action="openColorPop"}}
+      </script>
+    </div>
+  </body>
+</html>
