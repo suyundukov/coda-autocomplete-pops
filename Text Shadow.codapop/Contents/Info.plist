@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Scopes</key>
+	<array>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.CSS</string>
+			<key>Properties</key>
+			<dict>
+				<key>text-shadow</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.SCSS</string>
+			<key>Properties</key>
+			<dict>
+				<key>text-shadow</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>ModeIdentifier</key>
+			<string>SEEMode.LESS</string>
+			<key>Properties</key>
+			<dict>
+				<key>text-shadow</key>
+				<dict>
+					<key>RequiresContext</key>
+					<false/>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>Size</key>
+	<string>{288, 105}</string>
+	<key>Title</key>
+	<string>Text Shadow</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.panic.pop.textshadow</string>
+</dict>
+</plist>

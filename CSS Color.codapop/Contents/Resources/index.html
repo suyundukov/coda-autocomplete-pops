@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="stylesheets/color-picker.css" rel="stylesheet">
+    <script src="javascripts/jquery-1.7.2.js"></script>
+    <script src="javascripts/ember-0.9.7.1.js"></script>
+    <script src="javascripts/ember-jui.js"></script>
+    <script src="javascripts/popkit.js"></script>
+    <script src="javascripts/color-picker.js"></script>
+  </head>
+  <body>
+    <div id="color_picker">
+      <script type="text/x-handlebars">
+        <div class="container">
+          <div class="opacity">
+            <div class="opacity_bar"><div class="opacity_overlay"></div></div>
+            {{view ColorPicker.OpacitySlider classNames="opacity_slider"}}
+          </div>
+          <div class="main">
+            {{view ColorPicker.Picker classNames="palette"}}
+            {{#view ColorPicker.Loope classNames="thumb"}}
+              <div class="thumb_wrapper">
+                <div class="thumb_background"></div>
+                <div class="thumb_overlay"></div>
+              </div>
+            {{/view}}
+          </div>
+          <div class="hues">
+            <div class="hue_bar"></div>
+            {{view ColorPicker.HueSlider classNames="hue_slider"}}
+          </div>
+        </div>
+  
+        <div class="swatches">
+          {{#collection contentBinding="ColorPicker.swatchesController.withEmpty"
+                        tagName="ol"
+                        itemViewClass="ColorPicker.SwatchButton"}}
+            <div class="checkered"></div>
+            <div class="color"></div>
+            <div class="close"></div>
+          {{/collection}}
+        </div>
+      </script>
+    </div>
+  </body>
+</html>

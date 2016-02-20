@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="stylesheets/gradient.css" rel="stylesheet">
+    <script src="javascripts/jquery-1.7.2.js"></script>
+    <script src="javascripts/ember-0.9.7.1.js"></script>
+    <script src="javascripts/ember-jui.js"></script>
+    <script src="javascripts/popkit.js"></script>
+    <script src="javascripts/color-picker.js"></script>
+    <script src="javascripts/gradient.js"></script>
+  </head>
+  <body>
+    <div id="gradient">
+      <script type="text/x-handlebars">
+        <div class="container">
+          <div class="opacity">
+            <div class="opacity_bar"><div class="opacity_overlay"></div></div>
+            {{view ColorPicker.OpacitySlider classNames="opacity_slider"}}
+          </div>
+          <div class="main">
+            {{view ColorPicker.Picker classNames="palette"}}
+            {{#view ColorPicker.Loope classNames="thumb"}}
+              <div class="thumb_wrapper">
+                <div class="thumb_background"></div>
+                <div class="thumb_overlay"></div>
+              </div>
+            {{/view}}
+          </div>
+          <div class="hues">
+            <div class="hue_bar"></div>
+            {{view ColorPicker.HueSlider classNames="hue_slider"}}
+          </div>
+        </div>
+  
+        <div class="gradient">
+          <div class="gradient_check"></div>
+          {{view Gradient.Preview
+                 classNames="gradient_bar"
+                 contentBinding="Gradient.colorStopsController.previewGradientCSS"}}
+      
+          {{#collection contentBinding="Gradient.colorStopsController"
+                       classNames="color_stops"
+                       itemViewClass="Gradient.ColorStopSlider"}}
+            <a class="ui-slider-handle"><div class="mask"></div><div class="close"></div></a>
+          {{/collection}}
+        </div>
+    
+        <div class="swatches">
+          {{#collection contentBinding="Gradient.swatchesController.withEmpty"
+                        tagName="ol"
+                        itemViewClass="Gradient.SwatchButton"}}
+            <div class="checkered"></div>
+            <div class="color"></div>
+            <div class="close"></div>
+          {{/collection}}
+        </div>
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,321 @@
+html {
+	background: transparent;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+/* Base container */
+.pop, #box_shadow {
+	background: transparent;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-webkit-user-select: none;
+}
+
+/* A color swatch */
+.swatch {
+	width: 40px;
+	height: 33px;
+	position: relative;
+	-webkit-box-shadow: #fff 0 2px 0;
+	padding: 0;
+	border: 0;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.swatch .checkered {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-mask-image: url('../images/pop-swatch-mask.png');
+	-webkit-mask-image: -webkit-image-set(url(../images/pop-swatch-mask.png) 1x, url(../images/pop-swatch-mask@2x.png) 2x);
+	background-image: url('../images/checker-pattern.png');
+	background-image: -webkit-image-set(url(../images/checker-pattern.png) 1x, url(../images/checker-pattern@2x.png) 2x);
+	background-size: 10px 10px;
+
+}
+.swatch .color {
+	pointer-events: none;
+	background: rgba(0, 0, 255, 0.5);
+	-webkit-mask-image: url('../images/pop-swatch-mask.png');
+	-webkit-mask-image: -webkit-image-set(url(../images/pop-swatch-mask.png) 1x, url(../images/pop-swatch-mask@2x.png) 2x);
+	width: 40px;
+	height: 34px;
+	pointer-events: none;
+}
+.swatch .color:after {
+	pointer-events: none;
+	background: url('../images/pop-swatch-overlay.png') no-repeat;
+	background-image: -webkit-image-set(url(../images/pop-swatch-overlay.png) 1x, url(../images/pop-swatch-overlay@2x.png) 2x);
+	background-repeat: no-repeat;
+	background-size: 40px 34px;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* Slider Tracks and Handles */
+.pop-ui-slider, .base-pop-track .ui-slider, .pop-track .ui-slider, .track .ui-slider, .pop-snap-track .ui-slider, .snap-track .ui-slider {
+	position: relative;
+	height: 16px;
+}
+.pop-ui-slider .ui-slider-handle, .base-pop-track .ui-slider .ui-slider-handle, .pop-track .ui-slider .ui-slider-handle, .track .ui-slider .ui-slider-handle, .pop-snap-track .ui-slider .ui-slider-handle, .snap-track .ui-slider .ui-slider-handle {
+	display: block;
+	width: 11px;
+	margin-left: -5px;
+	height: 16px;
+	position: absolute;
+	background: url('../images/pop-slider-normal-thumb.png') no-repeat;
+	background-image: -webkit-image-set(url(../images/pop-slider-normal-thumb.png) 1x, url(../images/pop-slider-normal-thumb@2x.png) 2x);
+	background-repeat: no-repeat;
+	background-size: 11px 16px;
+}
+.pop-ui-slider .ui-slider-handle.ui-state-focus, .base-pop-track .ui-slider .ui-slider-handle.ui-state-focus, .pop-track .ui-slider .ui-slider-handle.ui-state-focus, .track .ui-slider .ui-slider-handle.ui-state-focus, .pop-snap-track .ui-slider .ui-slider-handle.ui-state-focus, .snap-track .ui-slider .ui-slider-handle.ui-state-focus {
+	outline: none;
+}
+.pop-ui-slider .ui-slider-handle.ui-state-active, .base-pop-track .ui-slider .ui-slider-handle.ui-state-active, .pop-track .ui-slider .ui-slider-handle.ui-state-active, .track .ui-slider .ui-slider-handle.ui-state-active, .pop-snap-track .ui-slider .ui-slider-handle.ui-state-active, .snap-track .ui-slider .ui-slider-handle.ui-state-active {
+	background-image: url('../images/pop-slider-normal-thumb-selected.png');
+	background-image: -webkit-image-set(url(../images/pop-slider-normal-thumb-selected.png) 1x, url(../images/pop-slider-normal-thumb-selected@2x.png) 2x); 
+	background-image: -webkit-image-set(url(../images/pop-slider-normal-thumb.png) 1x, url(../images/pop-slider-normal-thumb@2x.png) 2x);
+}
+
+.base-pop-track, .pop-track, .track, .pop-snap-track, .snap-track {
+	display: inline;
+	float: left;
+	position: relative;
+	background: url('../images/pop-slider-track-left.png') no-repeat 0 4px, url('../images/pop-slider-track-right.png') no-repeat right 4px, url('../images/pop-slider-track-mid.png') repeat-x 0 4px;
+	background-image: -webkit-image-set(url(../images/pop-slider-track-left.png) 1x, url(../images/pop-slider-track-left@2x.png) 2x), -webkit-image-set(url(../images/pop-slider-track-right.png) 1x, url(../images/pop-slider-track-right@2x.png) 2x), -webkit-image-set(url(../images/pop-slider-track-mid.png) 1x, url(../images/pop-slider-track-mid@2x.png) 2x);
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	background-position: 0 4px, right 4px, 0 4px;
+	background-size: 2px 6px, 2px 6px, 1px 6px;
+}
+
+.pop-snap-track, .snap-track {
+	height: 27px;
+}
+.pop-snap-track .sep, .snap-track .sep {
+	display: block;
+	width: 5px;
+	height: 6px;
+	position: absolute;
+	top: 4px;
+	left: 8px;
+	background: url('../images/pop-slider-track-short-left.png') no-repeat 100% 0, url('../images/pop-slider-track-short-right.png') no-repeat 0 0, #ededed;
+	background-image: -webkit-image-set(url(../images/pop-slider-track-short-left.png) 1x, url(../images/pop-slider-track-short-left@2x.png) 2x), -webkit-image-set(url(../images/pop-slider-track-short-right.png) 1x, url(../images/pop-slider-track-short-right@2x.png) 2x);
+	background-color: inherit, inherit, #ededed;
+	background-repeat: no-repeat, no-repeat;
+	background-position: 100% 0, 0 0;
+	background-size: 2px 6px, 2px 6px;
+}
+.pop-snap-track .zero, .snap-track .zero, .pop-snap-track .one, .snap-track .one, .pop-snap-track .hundred, .snap-track .hundred {
+	font-size: 9px;
+	color: #999;
+	position: absolute;
+	top: 15px;
+}
+.pop-snap-track .zero, .snap-track .zero {
+	left: -2px;
+}
+.pop-snap-track .one, .snap-track .one {
+	left: 8px;
+}
+.pop-snap-track .hundred, .snap-track .hundred {
+	left: 100%;
+}
+
+.pop-gear {
+	width: 11px;
+	height: 12px;
+	background: url('../images/pop-options.png') no-repeat;
+	background-image: -webkit-image-set(url(../images/pop-options.png) 1x, url(../images/pop-options@2x.png) 2x);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	background-size: 11px 12px;
+}
+.pop-gear select {
+	opacity: 0;
+	width: 11px;
+	height: 12px;
+	overflow: hidden;
+}
+
+#box_shadow {
+	width: 289px;
+	height: 128px;
+	padding: 9px 0 0 15px;
+}
+
+.inset {
+	display: inline;
+	float: left;
+	width: 45px;
+	height: 108px;
+	padding: 11px 11px 0 0;
+	margin: 0 12px 0 0;
+	background: url('../images/pop-separator-vertical-1.png') no-repeat right 0;
+	background-image: -webkit-image-set(url(../images/pop-separator-vertical-1.png) 1x, url(../images/pop-separator-vertical-1@2x.png) 2x);
+	background-repeat: no-repeat;
+	background-position: right 0;
+	background-size: 1px 110px;
+}
+.inset ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.inset ul li {
+	list-style-image: none;
+	list-style-type: none;
+	margin-left: 0px;
+}
+.inset ul li {
+	overflow: hidden;
+	*zoom: 1;
+}
+.inset ul li input {
+	display: inline;
+	float: left;
+}
+.inset ul li label {
+	display: inline;
+	float: left;
+}
+.inset ul li#outset {
+	margin: 0 0 8px 0;
+}
+.inset ul li#outset label {
+	margin: 1px 0 0 7px;
+	text-indent: -119988px;
+	overflow: hidden;
+	text-align: left;
+	background-image: url('../images/pop-shadow-legend-outer.png');
+	background-image: -webkit-image-set(url(../images/pop-shadow-legend-outer.png) 1x, url(../images/pop-shadow-legend-outer@2x.png) 2x);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 20px;
+	height: 19px;
+}
+.inset ul li#inset {
+	margin: 0 0 12px 0;
+}
+.inset ul li#inset label {
+	margin: 2px 0 0 10px;
+	text-indent: -119988px;
+	overflow: hidden;
+	text-align: left;
+	background-image: url('../images/pop-shadow-legend-inner.png');
+	background-image: -webkit-image-set(url(../images/pop-shadow-legend-inner.png) 1x, url(../images/pop-shadow-legend-inner@2x.png) 2x);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 14px;
+	height: 13px;
+}
+
+.sliders {
+	display: inline;
+	float: left;
+	width: 206px;
+	padding: 8px 0 0 0;
+}
+.sliders ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sliders ul li {
+	list-style-image: none;
+	list-style-type: none;
+	margin-left: 0px;
+}
+.sliders ul li {
+	overflow: hidden;
+	*zoom: 1;
+}
+.sliders ul li label {
+	display: inline;
+	float: left;
+	width: 11px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #666;
+}
+.sliders ul li#x label, .sliders ul li#y label {
+	padding-top: 2px;
+}
+.sliders ul li#blur label.less {
+	margin: 3px 4px 0 0;
+	text-indent: -119988px;
+	overflow: hidden;
+	text-align: left;
+	background-image: url('../images/pop-shadow-legend-sharp.png');
+	background-image: -webkit-image-set(url(../images/pop-shadow-legend-sharp.png) 1x, url(../images/pop-shadow-legend-sharp@2x.png) 2x);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 7px;
+	height: 7px;
+}
+.sliders ul li#blur label.more {
+	margin: -4px 0 0 -3px;
+	text-indent: -119988px;
+	overflow: hidden;
+	text-align: left;
+	background-image: url('../images/pop-shadow-legend-blurry.png');
+	background-image: -webkit-image-set(url(../images/pop-shadow-legend-blurry.png) 1x, url(../images/pop-shadow-legend-blurry@2x.png) 2x);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 23px;
+	height: 23px;
+}
+.sliders ul li#spread label.less {
+	margin: 3px 9px 0 0;
+	text-indent: -119988px;
+	overflow: hidden;
+	text-align: left;
+	background-image: url('../images/pop-shadow-legend-spread-none.png');
+	background-image: -webkit-image-set(url(../images/pop-shadow-legend-spread-none.png) 1x, url(../images/pop-shadow-legend-spread-none@2x.png) 2x);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 7px;
+	height: 7px;
+}
+.sliders ul li#spread label.more {
+	margin: 1px 0 0 8px;
+	text-indent: -119988px;
+	overflow: hidden;
+	text-align: left;
+	background-image: url('../images/pop-shadow-legend-spread-full.png');
+	background-image: -webkit-image-set(url(../images/pop-shadow-legend-spread-full.png) 1x, url(../images/pop-shadow-legend-spread-full@2x.png) 2x);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 11px;
+	height: 11px;
+}
+
+.snap-track {
+	width: 157px;
+	margin: 0 5px;
+}
+.snap-track .hundred {
+	left: 142px;
+}
+.snap-track .ui-slider {
+	width: 152px;
+	/*margin: 0 0 0 -5px;*/
+}
+
+.track {
+	width: 157px;
+}
+.track .ui-slider {
+	width: 152px;
+	/*margin: 0 0 0 -5px;*/
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="stylesheets/text-shadow.css" rel="stylesheet">
+    <script src="javascripts/jquery-1.7.2.js"></script>
+    <script src="javascripts/ember-0.9.7.1.js"></script>
+    <script src="javascripts/ember-jui.js"></script>
+    <script src="javascripts/popkit.js"></script>
+    <script src="javascripts/text-shadow.js"></script>
+  </head>
+  <body>
+    <div id="text_shadow">
+      <script type="text/x-handlebars">
+        <div class="inset">
+          {{view PopKit.Swatch 
+                 colorBinding="TextShadow.mainController.color"
+                 target="TextShadow.mainController" action="openColorPop"}}
+        </div>
+    
+        <div class="sliders">
+          <ul>
+            {{view PopKit.SnapSlider tagName="li" elementId="x" smallerLabel="X"
+                   valueBinding="TextShadow.mainController.x"}}
+            {{view PopKit.SnapSlider tagName="li" elementId="y" smallerLabel="Y"
+                   valueBinding="TextShadow.mainController.y"}}
+            {{view PopKit.SnapSlider tagName="li" elementId="blur"
+                   smallerLabel="Sharp" largerLabel="Blurry"
+                   valueBinding="TextShadow.mainController.blur"}}
+          </ul>
+        </div>
+      </script>
+    </div>
+  </body>
+</html>

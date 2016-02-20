@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="stylesheets/styles.css" rel="stylesheet">
+    <script src="javascripts/jquery-1.7.2.js"></script>
+    <script src="javascripts/ember-0.9.7.1.js"></script>
+    <script src="javascripts/ember-jui.js"></script>
+    <script src="javascripts/popkit.js"></script>
+    <script src="javascripts/style-defs.js"></script>
+    <script src="javascripts/styles.js"></script>
+  </head>
+  <body>
+    <div id="styles">
+      <div class="inset">
+        <script type="text/x-handlebars" data-view="Styles.MainView">
+          <div class="categories"><div class="wrapper">
+            {{#collection tagName="ul"
+                          contentBinding="Styles.categoriesController"
+                          itemViewClass="Styles.CategoryView"}}
+              <div class="icon"></div>
+              <label>{{content.name}}</label>
+            {{/collection}}
+          </div></div>
+      
+          <div class="styles">
+            {{#collection tagName="ul"
+                          contentBinding="Styles.stylesController"
+                          itemViewClass="Styles.ItemView"}}
+              {{content}}
+            {{/collection}}
+          </div>
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
