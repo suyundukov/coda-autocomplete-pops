@@ -29,7 +29,7 @@ curl -L https://github.com/sumaxime/Coda-Autocomplete-Pops/tarball/master | tar 
 
 #### Manual
 
-1. [Download](https://github.com/sumaxime/Coda-Autocomplete-Pops/archive/master.zip) zip archive.
+1. [Download][download] zip archive.
 2. Unarchive it.
 3. Go to Applications folder, right click on Coda 2.app and select "Show Package Contents", go to Contents folder.
 4. Now just Copy & Paste all `.codapop` files from zip archive to PlugIns folder.
@@ -39,6 +39,14 @@ curl -L https://github.com/sumaxime/Coda-Autocomplete-Pops/tarball/master | tar 
 **Version 1.0**
 - Added Sass mode support
 
+## License
+
+<p align="center">
+  <a href="./LICENSE"><img src="https://i1.sumaxi.me/i/logo.svg" width="100%" height="128"></a>
+  <a href="./LICENSE"><strong>MIT</strong></a>
+</p>
+
 
 
 [colorPop]: http://i.imgur.com/yk9mZIA.png
+[download]: https://github.com/sumaxime/Coda-Autocomplete-Pops/archive/master.zip
