@@ -16,7 +16,7 @@ Pops help you to easily change some CSS properties, like `border-radius`, `borde
 
 ```
 cd /Applications/Coda\ 2.app/Contents/
-git clone https://github.com/sumaxime/Coda-Autocomplete-Pops.git temp
+git clone https://github.com/nurlansu/Coda-Autocomplete-Pops.git temp
 cp -r temp/* PlugIns && rm -rf temp
 ```
 
@@ -24,7 +24,7 @@ cp -r temp/* PlugIns && rm -rf temp
 
 ```
 cd /Applications/Coda\ 2.app/Contents/
-curl -L https://github.com/sumaxime/Coda-Autocomplete-Pops/tarball/master | tar xz --strip 1 -C PlugIns
+curl -L https://github.com/nurlansu/Coda-Autocomplete-Pops/tarball/master | tar xz --strip 1 -C PlugIns
 ```
 
 #### Manual
@@ -42,11 +42,11 @@ curl -L https://github.com/sumaxime/Coda-Autocomplete-Pops/tarball/master | tar 
 ## License
 
 <p align="center">
-  <a href="./LICENSE"><img src="https://i1.sumaxi.me/i/logo.svg" width="100%" height="128"></a>
+  <a href="./LICENSE"><img src="https://i.nurlan.co/i/logo.svg" width="100%" height="128"></a>
   <a href="./LICENSE"><strong>MIT</strong></a>
 </p>
 
 
 
 [colorPop]: http://i.imgur.com/yk9mZIA.png
-[download]: https://github.com/sumaxime/Coda-Autocomplete-Pops/archive/master.zip
+[download]: https://github.com/nurlansu/Coda-Autocomplete-Pops/archive/master.zip
