@@ -42,7 +42,7 @@ curl -L https://github.com/nurlansu/Coda-Autocomplete-Pops/tarball/master | tar 
 ## License
 
 <p align="center">
-  <a href="./LICENSE"><img src="https://i.nurlan.co/logo.svg" width="100%" height="128"></a>
+  <a href="./LICENSE"><img src="https://nurlan.co/cdn/logo.svg" width="100%" height="128"></a>
   <a href="./LICENSE"><strong>MIT</strong></a>
 </p>
 
